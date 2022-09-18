@@ -9,18 +9,17 @@ import UIKit
 
 class ViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
-    @IBOutlet weak var Buy: UIButton!
-    @IBOutlet weak var CreateAccount: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func buyTapped(_ sender: Any) {
         coordinator?.buySubscription()
     }
-    @IBAction func createAccount(_ sender: Any) {
+    
+    @IBAction func createAccountTapped(_ sender: Any) {
         coordinator?.createAccount()
     }
 }
